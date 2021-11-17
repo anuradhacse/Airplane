@@ -24,6 +24,6 @@ Run
 >gradlew clean build
 
 Go to build directory and Run
-> java -jar seat-allocate-0.0.1-SNAPSHOT.jar 'inputParams'
+> java -jar seat-allocate-0.0.1-SNAPSHOT.jar "3,2"  "4,3" "2,3" "3,4" 30
 
 

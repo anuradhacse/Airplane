@@ -7,6 +7,8 @@ public class AirPlane {
 
     private List<SeatSet> seatSet = new ArrayList<>();
     private int maximumLines;
+    private int totalSeats;
+    private int totalPassengerCount;
 
     public AirPlane() {
     }
@@ -29,5 +31,21 @@ public class AirPlane {
 
     public void setMaximumLines(int maximumLines) {
         this.maximumLines = maximumLines;
+    }
+
+    public int getTotalSeats() {
+        return totalSeats;
+    }
+
+    public void setTotalSeats(int totalSeats) {
+        this.totalSeats = totalSeats;
+    }
+
+    public int getTotalPassengerCount() {
+        return totalPassengerCount;
+    }
+
+    public void setTotalPassengerCount(int totalPassengerCount) {
+        this.totalPassengerCount = totalPassengerCount;
     }
 }
