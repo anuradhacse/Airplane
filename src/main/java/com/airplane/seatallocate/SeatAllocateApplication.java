@@ -2,9 +2,6 @@ package com.airplane.seatallocate;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @SpringBootApplication
 public class SeatAllocateApplication {
 
@@ -18,8 +15,11 @@ public class SeatAllocateApplication {
 		SeatAllocation.allocateCenterSeats(airplane, passengerId, totalPassengerCount);
 
 		System.out.println("Seat set Ids are increasing from left to right: 1 , 2 , 3 , 4 .....");
+
 		for(SeatSet seatSet : airplane.getSeatSet()){
+
 			System.out.println("============== Seat Set ID: " + seatSet.getId()+ " ==================");
+
 			for(SeatRow seatRow : seatSet.getSeatRows()){
 				for(Seat seat: seatRow.getSeats()){
 					if(seat.getPassengerNumber() > 0){
