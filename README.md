@@ -1,13 +1,17 @@
 # Read Me First
 
-Rules for seating
+### Rules for seating
+
 • Always seat passengers starting from the front row to back,
 starting from the left to the right
+
 • Fill aisle seats first followed by window seats followed by center
 seats (any order in center seats)
-Input to the program will be
+
+### Input to the program will be
 • a 2D array that represents the rows and columns [ [3,4], [4,5],
 [2,3], [3,4] ]
+
 • Number of passengers waiting in queue.
 
 # Getting Started
@@ -19,7 +23,7 @@ Open the Gradle project in your favorite editor
 Run 
 >gradlew clean build
 
-Go to buld directory and Run
+Go to build directory and Run
 > java -jar seat-allocate-0.0.1-SNAPSHOT.jar <inputParams>
 
 
