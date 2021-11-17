@@ -10,9 +10,9 @@ public class SeatAllocateApplication {
 		AirPlane airplane = AirPlaneBuilder.build(args);
 		int totalPassengerCount = airplane.getTotalPassengerCount();
 
-		var passengerId = SeatAllocation.allocateAisleSeats(airplane, 1,totalPassengerCount );
-		passengerId = SeatAllocation.allocateWindowSeats(airplane, passengerId, totalPassengerCount);
-		SeatAllocation.allocateCenterSeats(airplane, passengerId, totalPassengerCount);
+		var passengerId = SeatAllocationUtil.allocateAisleSeats(airplane, 1,totalPassengerCount );
+		passengerId = SeatAllocationUtil.allocateWindowSeats(airplane, passengerId, totalPassengerCount);
+		SeatAllocationUtil.allocateCenterSeats(airplane, passengerId, totalPassengerCount);
 
 		System.out.println("Seat set Ids are increasing from left to right: 1 , 2 , 3 , 4 .....");
 

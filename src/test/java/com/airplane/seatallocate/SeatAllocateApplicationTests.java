@@ -14,7 +14,7 @@ class SeatAllocateApplicationTests {
 
 		//Aisle seat allocation
 		AirPlane airplane = AirPlaneBuilder.build(new String[]{"3,2", "4,3", "2,3", "3,4", "30"});
-		var passengerId = SeatAllocation.allocateAisleSeats(airplane, 1,
+		var passengerId = SeatAllocationUtil.allocateAisleSeats(airplane, 1,
 				airplane.getTotalPassengerCount() );
 
 		var seatSet = airplane.getSeatSet().get(0);
@@ -39,7 +39,7 @@ class SeatAllocateApplicationTests {
 		Assertions.assertEquals(9, seatRows.get(3).getSeats().get(1).getPassengerNumber());
 
 		//window seat allocation
-		passengerId = SeatAllocation.allocateWindowSeats(airplane, passengerId,
+		passengerId = SeatAllocationUtil.allocateWindowSeats(airplane, passengerId,
 				airplane.getTotalPassengerCount() );
 		seatSet = airplane.getSeatSet().get(0);
 		seatRows = seatSet.getSeatRows();
@@ -56,7 +56,7 @@ class SeatAllocateApplicationTests {
 		Assertions.assertEquals(22, seatRows.get(2).getSeats().get(1).getPassengerNumber());
 
 		//window seat allocation - for center seats there is no order.
-		SeatAllocation.allocateCenterSeats(airplane, passengerId,
+		SeatAllocationUtil.allocateCenterSeats(airplane, passengerId,
 				airplane.getTotalPassengerCount() );
 		seatSet = airplane.getSeatSet().get(1);
 		seatRows = seatSet.getSeatRows();
@@ -67,4 +67,5 @@ class SeatAllocateApplicationTests {
 
 	}
 
+	//todo write tests for invalid scenarios and edge cases
 }

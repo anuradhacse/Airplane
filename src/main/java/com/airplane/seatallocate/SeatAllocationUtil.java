@@ -1,6 +1,6 @@
 package com.airplane.seatallocate;
 
-public class SeatAllocation {
+public class SeatAllocationUtil {
 
     /**
      * a seat next to an aisle
