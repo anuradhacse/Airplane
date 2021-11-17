@@ -6,7 +6,7 @@
 starting from the left to the right
 
 • Fill aisle seats first followed by window seats followed by center
-seats (any order in center seats)
+seats (**any order in center seats**)
 
 ### Input to the program will be
 • a 2D array that represents the rows and columns [ [3,4], [4,5],
